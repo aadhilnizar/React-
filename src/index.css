@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #000000;
+  background-image: radial-gradient(circle at 0% 0%, #000000, #000000)  ;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* Porsche Regular TTF */
+@font-face {
+  font-family: "porsche";
+  src: url("/public/Porsche Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Heathergreen OTF */
+@font-face {
+  font-family: "heather";
+  src: url("/public/Heathergreen.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Moonscape OTF */
+@font-face {
+  font-family: "moonscape";
+  src: url("/public/Moonscape Demo.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "Porsche";
+  src: url("https://db.onlinewebfonts.com/t/69bf1da44c2af3ed36fa50016318d1f8.woff2") format("woff2"),
+       url("https://db.onlinewebfonts.com/t/69bf1da44c2af3ed36fa50016318d1f8.woff") format("woff"),
+       url("https://db.onlinewebfonts.com/t/69bf1da44c2af3ed36fa50016318d1f8.ttf") format("truetype");
+  /* etc. */
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(-12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeInUp {
+  animation: fadeInUp 0.56s ease forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.animate-fadeIn {
+  animation: fadeIn 2.0s ease forwards;
+}
+
+@keyframes fadeInUpp {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.hover-fadeInUpp {
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.group:hover .hover-fadeInUpp {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInUp 0.4s forwards;
+}
