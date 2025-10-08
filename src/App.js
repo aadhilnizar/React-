@@ -1,17 +1,18 @@
 import React, { use, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 // import { fetchProducts } from "./components/ProductSlice";
-import { toggleTheme } from "./components/ThemeSlice";
-import { addToCart, removeFromCart, clearCart } from "./components/CartSlice";
-import { toggleLanguage } from "./components/LanguageSlice";
-import i18n from "./components/i18n";
+import { toggleTheme } from "./components/Basic Tasks/ThemeSlice";
+import { addToCart, removeFromCart, clearCart } from "./components/Basic Tasks/CartSlice";
+import { toggleLanguage } from "./components/Basic Tasks/LanguageSlice";
+import i18n from "./components/Basic Tasks/i18n";
 import { useTranslation } from "react-i18next";
 import NavBar from "./components/PageDesign/NavBar";
-import Styling from "./components/Styling";
+import Styling from "./components/Basic Tasks/Styling";
 import Menu from "./components/PageDesign/Menu";
 import Footer from "./components/PageDesign/Footer";
 import SelectInput from "./components/Selection/SelectInput";
-
+import Table from "./components/Basic Tasks/Table";
+import TableComponent from "./components/TableCrud/Table";
 
 
 function Counter() {
@@ -36,7 +37,9 @@ function Counter() {
        {/* <NavBar />
        < Menu />
        <Footer /> */}
-       <SelectInput />
+       {/* <SelectInput /> */}
+       {/* < Table /> */}
+       <TableComponent />
     </div>
    
     // <div

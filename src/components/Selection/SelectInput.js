@@ -188,7 +188,7 @@ const [elements, setElements] = useState([
 
       <button
         onClick={handleAddElement}
-        className="self-start bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+        className="self-start bg-white text-black px-4 py-2 rounded hover:bg-gray-300 transition"
       >
         ➕ Add Element
       </button>

@@ -10,7 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #000000;
-  background-image: radial-gradient(circle at 0% 0%, #000000, #000000)  ;
+  /* background-image: radial-gradient(circle at 0% 0%, #000000, #000000)  ; */
 }
 
 code {
