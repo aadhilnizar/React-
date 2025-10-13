@@ -15,6 +15,7 @@ import SelectInput from "./components/Selection/SelectInput";
 import Table from "./components/Basic Tasks/Table";
 import TableComponent from "./components/TableCrud/Table";
 import Owners from "./components/PageDesign/Owners";
+import LoginForm from "./components/CustomHook/Login";
 
 
 
@@ -34,13 +35,14 @@ function Counter() {
           element={<Suspense fallback={<div className="text-white"> Loading... </div> } >
       <Shop />
     </Suspense>
-  }
+  } 
 />
 
         <Route path="/owners" element={<Owners />} />
         {/* <Route path="/select" element={<SelectInput />} /> */}
       </Routes>
-      <Footer />
+      <Footer /> 
+      <LoginForm />
     </div>
   );
 }

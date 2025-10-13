@@ -115,13 +115,13 @@ function Menu() {
       <div className="p-4 rounded-xl">
         <div className="relative w-full h-screen">
           <img
-            src="/img6.jpg"
+            src="/pp1.jpg"
             alt="Porsche 911"
             className="w-full h-full object-cover opacity-0 animate-fadeIn"
           />
 
           {/* Typing Heading */}
-          <h1 className="absolute top-6 left-0 w-full text-7xl font-bold text-black drop-shadow-lg text-center px-4 font-heather tracking-wider">
+          <h1 className="absolute top-6 left-0 w-full text-7xl font-bold text-white drop-shadow-lg text-center px-4 font-heather tracking-wider">
             {letters.map((char, i) => (
               <span
                 key={i}
@@ -245,7 +245,7 @@ function Menu() {
       <div className="p-6 flex flex-col items-center">
         {/* Logo on top center */}
         <img
-          src="/logo.png" // <-- replace with your logo path
+          src="/logo.png" 
           alt="911 Logo"
           className="w-32 h-32 object-contain mb-6"
         />
