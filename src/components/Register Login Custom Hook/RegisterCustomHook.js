@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function RegisterCustomHook() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -12,26 +14,22 @@ function RegisterCustomHook() {
       return;
     }
 
-    
     const users = JSON.parse(localStorage.getItem("users")) || [];
 
-    
     const userExists = users.some((user) => user.email === email);
     if (userExists) {
       alert("User already registered!");
       return;
     }
 
-
     const newUser = { email, password };
     users.push(newUser);
-
-    
     localStorage.setItem("users", JSON.stringify(users));
 
-    alert("Registration successful!");
+    alert("✅ Registration successful!");
     setEmail("");
     setPassword("");
+    navigate("/login");
   };
 
   return (
@@ -40,9 +38,7 @@ function RegisterCustomHook() {
         onSubmit={handleRegister}
         className="bg-white p-6 rounded-xl shadow-md w-80"
       >
-        <h2 className="text-2xl font-semibold text-center mb-4">
-          Register
-        </h2>
+        <h2 className="text-2xl font-semibold text-center mb-4">Register</h2>
 
         <label className="block mb-2 text-gray-700">Email</label>
         <input
@@ -73,4 +69,4 @@ function RegisterCustomHook() {
   );
 }
 
-export default RegisterCustomHook
+export default RegisterCustomHook;

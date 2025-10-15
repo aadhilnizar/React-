@@ -16,6 +16,8 @@ import Table from "./components/Basic Tasks/Table";
 import TableComponent from "./components/TableCrud/Table";
 import Owners from "./components/PageDesign/Owners";
 import LoginForm from "./components/CustomHook/Login";
+import LoginCustomHook from "./components/Register Login Custom Hook/LoginCustomHook";
+import RegisterCustomHook from "./components/Register Login Custom Hook/RegisterCustomHook";
 
 
 
@@ -39,10 +41,12 @@ function Counter() {
 />
 
         <Route path="/owners" element={<Owners />} />
+        <Route path="/login" element={<LoginCustomHook />} />
+        <Route path="/register" element={<RegisterCustomHook />} />
         {/* <Route path="/select" element={<SelectInput />} /> */}
       </Routes>
       <Footer /> 
-      <LoginForm />
+      
     </div>
   );
 }
