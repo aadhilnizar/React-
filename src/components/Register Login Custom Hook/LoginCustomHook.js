@@ -1,29 +1,38 @@
+// src/components/LoginCustomHook.js
 import React, { useState } from "react";
-import useLogin from "../Register Login Custom Hook/useLogin";
+import { useNavigate } from "react-router-dom";
+import { useMessage } from "../Register Login Custom Hook/MessageContext";
+import Message from "./Message";
 
-function LoginCustomHook() {
+const LoginCustomHook = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { login, isLoggedIn, error } = useLogin();
-  const [message, setMessage] = useState("");
-  const [style, setStyle] = useState("");
+  const navigate = useNavigate();
+  const { showError, showSuccess } = useMessage();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const result = login(email, password);
 
-    setMessage(result.message);
-    setStyle(
-      result.success
-        ? "bg-green-100 text-green-700 border border-green-300"
-        : "bg-red-100 text-red-700 border border-red-300"
+    if (!email || !password) {
+      showError("Please fill in both fields!");
+      return;
+    }
+
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    const user = users.find(
+      (user) => user.email === email && user.password === password
     );
 
-    // Clear message after 3s
-    setTimeout(() => {
-      setMessage("");
-      setStyle("");
-    }, 3000);
+    if (user) {
+      localStorage.setItem("user", JSON.stringify({ email: user.email }));
+      showSuccess("✅ Login successful!");
+
+      setTimeout(() => {
+        // navigate("/"); 
+      }, 1000);
+    } else {
+      showError("❌ Invalid email or password!");
+    }
   };
 
   return (
@@ -34,29 +43,22 @@ function LoginCustomHook() {
       >
         <h2 className="text-2xl font-semibold text-center mb-4">Login</h2>
 
-        {/* Dynamic message box */}
-        {message && (
-          <div className={`p-2 rounded mb-3 text-center ${style}`}>
-            {message}
-          </div>
-        )}
+        <Message />
 
-        <label className="block mb-2 text-gray-700">Email</label>
+        <label>Email</label>
         <input
           type="email"
+          className="w-full px-3 py-2 border border-gray-300 rounded mb-3"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full px-3 py-2 border border-gray-300 rounded mb-4"
-          placeholder="Enter your email"
         />
 
-        <label className="block mb-2 text-gray-700">Password</label>
+        <label>Password</label>
         <input
           type="password"
+          className="w-full px-3 py-2 border border-gray-300 rounded mb-4"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="w-full px-3 py-2 border border-gray-300 rounded mb-4"
-          placeholder="Enter your password"
         />
 
         <button
@@ -65,15 +67,9 @@ function LoginCustomHook() {
         >
           Login
         </button>
-
-        {isLoggedIn && (
-          <p className="text-green-500 text-center mt-3">
-            ✅ You are logged in!
-          </p>
-        )}
       </form>
     </div>
   );
-}
+};
 
 export default LoginCustomHook;

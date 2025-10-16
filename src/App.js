@@ -18,6 +18,7 @@ import Owners from "./components/PageDesign/Owners";
 import LoginForm from "./components/CustomHook/Login";
 import LoginCustomHook from "./components/Register Login Custom Hook/LoginCustomHook";
 import RegisterCustomHook from "./components/Register Login Custom Hook/RegisterCustomHook";
+import { MessageProvider } from "./components/Register Login Custom Hook/MessageContext";
 
 
 
@@ -41,10 +42,13 @@ function Counter() {
 />
 
         <Route path="/owners" element={<Owners />} />
+        
         <Route path="/login" element={<LoginCustomHook />} />
         <Route path="/register" element={<RegisterCustomHook />} />
+        
         {/* <Route path="/select" element={<SelectInput />} /> */}
       </Routes>
+    
       <Footer /> 
       
     </div>
@@ -54,7 +58,9 @@ function Counter() {
 export default function App() {
   return (
     <Router>
+      <MessageProvider>
       <Counter />
+      </MessageProvider>
     </Router>
   );
 }
