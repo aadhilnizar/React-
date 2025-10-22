@@ -19,6 +19,7 @@ import LoginForm from "./components/CustomHook/Login";
 import LoginCustomHook from "./components/Register Login Custom Hook/LoginCustomHook";
 import RegisterCustomHook from "./components/Register Login Custom Hook/RegisterCustomHook";
 import { MessageProvider } from "./components/Register Login Custom Hook/MessageContext";
+import Styling from "./CssStylings/Styling";
 
 
 
@@ -50,7 +51,7 @@ function Counter() {
       </Routes>
     
       <Footer /> 
-      
+      <Styling />
     </div>
   );
 }

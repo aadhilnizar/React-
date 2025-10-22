@@ -10,7 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #000000;
-  /* background-image: radial-gradient(circle at 0% 0%, #000000, #000000)  ; */
+  /* background-image: radial-gradient(circle at 0% 0%, #222222, #000000)  ; */
 }
 
 code {
@@ -116,4 +116,122 @@ code {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
+}
+.border-solid {
+  border: 2px solid black;
+  color: black;
+  height: 100vh;            
+  display: flex;            
+  justify-content: center;  
+  align-items: center;      
+  background: linear-gradient(90deg,rgb(109, 99, 182) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+
+}
+
+.rectangle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 350px;
+  border: 2px solid #000;
+  gap: 20px;
+   /* overflow: visible;  */
+  transition: all 0.5s ease;
+}
+.circle {
+  width: 150px;               
+   height: 150px;
+   border-radius: 50%;
+   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); 
+   z-index: 1;
+}
+
+.lime {
+  background-color: #8cf63b; 
+}
+
+.green {
+  background-color: #2d8c22; 
+}
+.rectangle:hover .lime {
+  transform: translateX(-300px); 
+}
+
+.rectangle:hover .green {
+  transform: translateX(300px); 
+}
+.bg-circle {
+  position: absolute;
+  border-radius: 20%;
+  filter: blur(25px);
+  opacity: 0.6;
+  animation: float 8s ease-in-out infinite alternate;
+  z-index: 1;
+}
+.bg-circle.small {
+  width: 80px;
+  height: 80px;
+  background-color: #ffffff; 
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+.bg-circle.mid {
+  width: 100px;
+  height: 100px;
+  background-color: #6d6d6d; 
+  top: 50%;
+  left: 40%;
+  animation-delay: 1s;
+}
+
+.bg-circle.big {
+  width: 90px;
+  height: 90px;
+  background-color: #1c4a30; 
+  bottom: 10%;
+  right: 5%;
+  animation-delay: 2s;
+}
+.bg-circle.mid1 {
+  width: 100px;
+  height: 100px;
+  background-color: #ffd54caa; 
+  top: 10%;
+  left: 70%;
+  animation-delay: 1s;
+}
+.bg-circle.mid2 {
+  width: 100px;
+  height: 100px;
+  background-color: #00ff48; 
+  top: 50%;
+  left: 10%;
+  animation-delay: 3s;
+}
+.bg-circle.mid3 {
+  width: 100px;
+  height: 100px;
+  background-color: #DDA0DD; 
+  top: 70%;
+  left: 20%;
+  animation-delay: 0s;
+}
+@keyframes float {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(30px, -30px) scale(1.05);
+  }
+  100% {
+    transform: translate(-30px, 30px) scale(1);
+  }
+}
+.image-carousel {
+  position: relative;
+  z-index: 2;
+  
 }

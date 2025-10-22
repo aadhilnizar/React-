@@ -73,7 +73,7 @@ function Menu() {
                     id: 3,
                     title: "Premium Craftsmanship",
                     description: "Every detail of the Panamera reflects the highest standards of automotive design and manufacturing excellence.",
-                    image: "Part3.avif"
+                    image: "Part3.avif" 
                 },
                 {
                   id: 4,  
@@ -147,7 +147,7 @@ function Menu() {
 
         {/* Text overlay */}
         <div className="relative z-10 flex items-center justify-center h-full">
-          <p className="text-4xl text-white font-bold text-center px-4">
+          <p className="text-4xl text-white font-bold text-center px-4 at-item">
             A Legacy of Innovation and Engineering Excellence
           </p>
         </div>
@@ -289,7 +289,7 @@ function Menu() {
       </Carousel>
 
 <div className="flex flex-col items-center justify-center max-w-5xl mx-auto p-4 gap-2">
-  <p className="text-white font-franklin text-3xl leading-snug text-center">
+  <p className="text-white font-franklin text-3xl leading-snug text-center ">
     Driving Dynamics.
   </p>
   <p className="text-white font-franklin text-lg leading-relaxed text-center">
@@ -308,8 +308,9 @@ function Menu() {
         containerClass="w-full max-w-full h-full"
         itemClass="flex justify-center px-4" // spacing between slides
         draggable
-        swipeable
+        swipeable className="slider"
       >
+    
         {slide.map((slides, i) => (
           <div
             key={i}
@@ -320,10 +321,15 @@ function Menu() {
               <img
                 src={slides.image}
                 alt={slides.title}
-                className="w-full h-24 md:h-[350px] object-cover rounded-8xl p-4"
+                className="w-full h-24 md:h-[350px] object-cover rounded-8xl p-4 image-carousel"
               />
             </div>
-
+           <div class="bg-circle small"></div>
+            <div class="bg-circle big"></div>
+            <div class="bg-circle mid"></div>
+            <div class="bg-circle mid1"></div>
+            <div class="bg-circle mid2"></div>
+            <div class="bg-circle mid3"></div>
             {/* Text on right */}
             <div className="md:w-[600px] w-full p-8 flex flex-col justify-center">
               <h2 className="text-4xl md:text-xl font-bold text-black mb-4">
