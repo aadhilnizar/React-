@@ -19,7 +19,7 @@ import LoginForm from "./components/CustomHook/Login";
 import LoginCustomHook from "./components/Register Login Custom Hook/LoginCustomHook";
 import RegisterCustomHook from "./components/Register Login Custom Hook/RegisterCustomHook";
 import { MessageProvider } from "./components/Register Login Custom Hook/MessageContext";
-import Styling from "./CssStylings/Styling";
+import Styling from "./components/CssStylings/Styling";
 
 
 
@@ -43,7 +43,6 @@ function Counter() {
 />
 
         <Route path="/owners" element={<Owners />} />
-        
         <Route path="/login" element={<LoginCustomHook />} />
         <Route path="/register" element={<RegisterCustomHook />} />
         

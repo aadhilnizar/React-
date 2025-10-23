@@ -10,7 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #000000;
-  /* background-image: radial-gradient(circle at 0% 0%, #222222, #000000)  ; */
+  /* background-image: radial-gradient(circle at 0% 0%, #000000, #000000)  ; */
 }
 
 code {
@@ -117,7 +117,7 @@ code {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
-.border-solid {
+/* .border-solid {
   border: 2px solid black;
   color: black;
   height: 100vh;            
@@ -126,7 +126,7 @@ code {
   align-items: center;      
   background: linear-gradient(90deg,rgb(109, 99, 182) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
 
-}
+} */
 
 .rectangle {
   position: relative;
