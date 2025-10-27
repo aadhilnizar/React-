@@ -21,7 +21,7 @@ function Shop() {
             height="100%"
             loading="lazy"
             allowFullScreen
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3915.765472111984!2d76.95366071480068!3d11.01684499215933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8598f4b3f58b7%3A0x1234567890abcdef!2sCoimbatore!5e0!3m2!1sen!2sin!4v1696600000000!5m2!1sen!2sin"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1dxxxxxx!2d9.183333!3d48.783333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x…!2sStuttgart!5e0!3m2!1sen!2sde!4v1696600000000!5m2!1sen!2sde" 
           ></iframe>
         </div>
 
