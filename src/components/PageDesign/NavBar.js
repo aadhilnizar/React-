@@ -6,7 +6,7 @@ const navigation = [
   { name: "Models", href: "/" , current: true },
   { name: "Shop", href: "/shop", current: false },
   { name: "Owners", href: "/owners", current: false },
-  { name: "Experience", href: "#", current: false },
+  { name: "Experience", href: "/exp", current: false },
   { name: "Motorsport", href: "#", current: false },
 ];
 

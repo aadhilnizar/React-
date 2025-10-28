@@ -235,3 +235,43 @@ code {
   z-index: 2;
   
 }
+.ball {
+  position: relative;
+  animation: bounce 2s ease-in-out infinite alternate;
+  margin-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(100px);
+    animation-timing-function: cubic-bezier(0.3, 0, 0.5, 1)
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+}
+
+.ball-shadow {
+  position: absolute;
+  width: 80px;
+  height: 20px;
+  background-color: #f1bfbf80;
+  border-radius: 50%;
+  top: 320px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: shadowScale 2s ease-in-out infinite alternate;
+}
+
+@keyframes shadowScale {
+  0%, 100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 0.1; 
+  }
+  50% {
+    transform: translateX(-50%) scale(0.7);
+    opacity: 1; 
+  }
+}

@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { toggleTheme } from "./components/Basic Tasks/ThemeSlice";
 import { addToCart, removeFromCart, clearCart } from "./components/Basic Tasks/CartSlice";
 import { toggleLanguage } from "./components/Basic Tasks/LanguageSlice";
-import { useTranslation } from "react-i18next";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Suspense ,lazy } from "react";
 
@@ -20,6 +19,10 @@ import LoginCustomHook from "./components/Register Login Custom Hook/LoginCustom
 import RegisterCustomHook from "./components/Register Login Custom Hook/RegisterCustomHook";
 import { MessageProvider } from "./components/Register Login Custom Hook/MessageContext";
 import Styling from "./components/CssStylings/Styling";
+import BallAnimation from "./components/CssStylings/BallAnimation";
+import Experience from "./components/PageDesign/Experience";
+import UserExp from "./components/PageDesign/UserExp";
+
 
 
 
@@ -41,16 +44,18 @@ function Counter() {
     </Suspense>
   } 
 />
-
+        <Route path="/exp/" element={<Experience/>} />
+         <Route path="/exp/:id" element={<UserExp/>} />
         <Route path="/owners" element={<Owners />} />
         <Route path="/login" element={<LoginCustomHook />} />
         <Route path="/register" element={<RegisterCustomHook />} />
         
-        {/* <Route path="/select" element={<SelectInput />} /> */}
+        <Route path="/select" element={<SelectInput />} />
       </Routes>
     
-      <Footer /> 
+      // <Footer /> 
       <Styling />
+      <BallAnimation />
     </div>
   );
 }
