@@ -7,6 +7,7 @@ function Experience() {
     { id: 1, name: "Aadhil" },
     { id: 2, name: "Abel" },
     { id: 3, name: "John" },
+    {id : 4 ,name: "Sara"}
   ];
 
   return (

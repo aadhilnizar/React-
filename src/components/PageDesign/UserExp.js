@@ -4,8 +4,6 @@ import { useParams } from 'react-router-dom'
 function UserExp() {
     
     const {id} =useParams();
-
-
   return (
     <div className='text-white'><h1>User Profile</h1>
     <div> 
@@ -14,5 +12,4 @@ function UserExp() {
     </div>
   )
 }
-
 export default UserExp

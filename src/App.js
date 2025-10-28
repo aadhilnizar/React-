@@ -22,6 +22,7 @@ import Styling from "./components/CssStylings/Styling";
 import BallAnimation from "./components/CssStylings/BallAnimation";
 import Experience from "./components/PageDesign/Experience";
 import UserExp from "./components/PageDesign/UserExp";
+import CountdownTimer from "./components/Timer/CountdownTimer";
 
 
 
@@ -53,9 +54,10 @@ function Counter() {
         <Route path="/select" element={<SelectInput />} />
       </Routes>
     
-      // <Footer /> 
+       <Footer /> 
       <Styling />
-      <BallAnimation />
+      {/* <BallAnimation /> */}
+      {/* <CountdownTimer /> */}
     </div>
   );
 }
